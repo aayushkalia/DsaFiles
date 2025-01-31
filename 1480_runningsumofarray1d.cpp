@@ -9,3 +9,12 @@ public:
         return nums;
     }
 };
+//Approach
+// used a variable to track the running sum of array while iterating through the vector using one for loop.
+
+// Complexity
+// Time complexity:
+// O(n)
+
+// Space complexity:
+// O(1) 
