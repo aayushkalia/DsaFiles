@@ -30,3 +30,9 @@ public:
 };
 
 // 🚀100% beginner friendly
+Approach
+used three variables, one to track if the subarray is increasing, one to check decreasing, one to store the max length of the required subarray.
+
+Complexity
+Time complexity:
+O(n)
