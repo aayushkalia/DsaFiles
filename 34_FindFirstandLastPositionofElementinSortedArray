@@ -1,0 +1,35 @@
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int low = 0,mid =0,high = nums.size()-1,anslow=-1,anshigh=-1;;
+        while(low<=high){
+            mid = low+(high-low)/2;
+            if(nums[mid]==target){
+                low=mid+1;
+                anshigh=mid;
+            }
+            else if(nums[mid]<target){
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+            }//one highest
+        }//two time bs, one for aisa high ele jo just equal ho neeche se, other jo just equal ho upar se
+        low=0,high=nums.size()-1;
+        while(low<=high){
+            mid = low+(high-low)/2;
+            if(nums[mid]==target){
+                high=mid-1;
+                anslow=mid;
+            }//one lowest
+            else if(nums[mid]<target){
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+            }
+        }
+
+        return {anslow,anshigh};
+    }
+};
