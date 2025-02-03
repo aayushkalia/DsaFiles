@@ -34,14 +34,14 @@ public:
     }
 };
 
-Search element Range -most Beginner Friendly|| C++ solution|| Beats 100%|| Easy To Understand 🚀🚀🚀
+// Search element Range -most Beginner Friendly|| C++ solution|| Beats 100%|| Easy To Understand 🚀🚀🚀
 
-Intuition
-Thought to use binary search seeing the word sorted
+// Intuition
+// Thought to use binary search seeing the word sorted
 
-Approach
-decided to try searching one inside the other, but then realised takes O((logn)^2) hence used the two binary searches , similar to upper and lower bound, just without the greater than equal to and less than equal to , i used them as separate cases.
+// Approach
+// decided to try searching one inside the other, but then realised takes O((logn)^2) hence used the two binary searches , similar to upper and lower bound, just without the greater than equal to and less than equal to , i used them as separate cases.
 
-Complexity
-✅ Time Complexity: O(log N)
-✅ Space Complexity: O(1)
+// Complexity
+// ✅ Time Complexity: O(log N)
+// ✅ Space Complexity: O(1)
