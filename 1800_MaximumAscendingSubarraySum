@@ -42,3 +42,11 @@ public:
 };
 o(n)
 🚀✅Maximum Ascending Subarray Sum - Easy To Understand C++ solution|| Beginner Friendly|| O(N) 🚀✅
+Intuition
+brute forcing would take O(n^2) but would work, tried experimenting for o(n)
+
+Approach
+the pass was used with only one loop to check the previous element, sum tracking the subarray sum and the max finding the maximum answer
+
+Complexity
+Time Complexity: O(n)
