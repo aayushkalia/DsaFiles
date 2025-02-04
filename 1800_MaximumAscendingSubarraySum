@@ -1,27 +1,27 @@
-class Solution {
-public:
-    int maxAscendingSum(vector<int>& nums) {
-        int maximum =INT_MIN;
-        if(nums.size()==1) return nums[0];
-        for(int i =0;i<nums.size()-1;i++){
-            int sum=0;
-            sum+=nums[i];
-            for(int j =i+1;j<nums.size();j++){
-                // if(j==i+1) sum+=nums[i];
-                if(nums[j]>nums[j-1]){
-                    sum+=nums[j];
-                    maximum = max(sum,maximum);    
-                }
-                else{
-                    maximum = max(sum,maximum);
-                    sum=0;
-                }}
-        }
-        return maximum;
-    }
-};
+// class Solution {
+// public:
+//     int maxAscendingSum(vector<int>& nums) {
+//         int maximum =INT_MIN;
+//         if(nums.size()==1) return nums[0];
+//         for(int i =0;i<nums.size()-1;i++){
+//             int sum=0;
+//             sum+=nums[i];
+//             for(int j =i+1;j<nums.size();j++){
+//                 // if(j==i+1) sum+=nums[i];
+//                 if(nums[j]>nums[j-1]){
+//                     sum+=nums[j];
+//                     maximum = max(sum,maximum);    
+//                 }
+//                 else{
+//                     maximum = max(sum,maximum);
+//                     sum=0;
+//                 }}
+//         }
+//         return maximum;
+//     }
+// };
 
-o(n2)
+// o(n2)
 class Solution {
 public:
     int maxAscendingSum(vector<int>& nums) {
@@ -40,13 +40,13 @@ public:
         return maximum;
     }
 };
-o(n)
-🚀✅Maximum Ascending Subarray Sum - Easy To Understand C++ solution|| Beginner Friendly|| O(N) 🚀✅
-Intuition
-brute forcing would take O(n^2) but would work, tried experimenting for o(n)
+// o(n)
+// 🚀✅Maximum Ascending Subarray Sum - Easy To Understand C++ solution|| Beginner Friendly|| O(N) 🚀✅
+// Intuition
+// brute forcing would take O(n^2) but would work, tried experimenting for o(n)
 
-Approach
-the pass was used with only one loop to check the previous element, sum tracking the subarray sum and the max finding the maximum answer
+// Approach
+// the pass was used with only one loop to check the previous element, sum tracking the subarray sum and the max finding the maximum answer
 
-Complexity
-Time Complexity: O(n)
+// Complexity
+// Time Complexity: O(n)
