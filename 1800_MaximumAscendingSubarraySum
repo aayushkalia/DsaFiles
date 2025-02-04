@@ -20,3 +20,5 @@ public:
         return maximum;
     }
 };
+
+o(n2)
