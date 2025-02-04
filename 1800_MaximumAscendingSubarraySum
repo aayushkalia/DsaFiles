@@ -22,3 +22,21 @@ public:
 };
 
 o(n2)
+class Solution {
+public:
+    int maxAscendingSum(vector<int>& nums) {
+        if(nums.size()==1) return nums[0];
+        int sum = nums[0];
+        int maximum =sum;
+        for(int i =1;i<nums.size();i++){
+            if(nums[i]>nums[i-1]){
+                sum+=nums[i];
+            }   
+            else{
+                sum=nums[i];
+            }
+            maximum = max(sum,maximum);
+        }
+        return maximum;
+    }
+};
