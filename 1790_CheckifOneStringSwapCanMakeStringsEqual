@@ -19,10 +19,10 @@ public:
         return false;
     }
 };
-🚀✅One Swap Check - Beginner friendly|| Easy to understand||c++ solution|| beats 100%🚀✅
-Approach
-checking if there are only two different characters in the strings or there are more different characters or zero different characters, then checking the characters.
+// 🚀✅One Swap Check - Beginner friendly|| Easy to understand||c++ solution|| beats 100%🚀✅
+// Approach
+// checking if there are only two different characters in the strings or there are more different characters or zero different characters, then checking the characters.
 
-Complexity
-Time complexity:
-O(n)
+// Complexity
+// Time complexity:
+// O(n)
