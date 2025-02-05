@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool areAlmostEqual(string s1, string s2) {
+        vector<char>st1;
+        vector<char>st2;
+        int cntdiff=0,i=0;
+        while(s1[i]){
+            if((char)s1[i]!=(char)(s2[i])){
+                st1.push_back((char)s1[i]);
+                st2.push_back((char)s2[i]);
+                cntdiff++;
+            }
+            i++;
+        }
+        if(cntdiff==2) {
+            if(st1[0]==st2[1]&&st1[1]==st2[0]) return true;
+        }
+        if(cntdiff==0) return true;
+        return false;
+    }
+};
