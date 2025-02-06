@@ -19,11 +19,11 @@ public:
     }
 };
 //solutions
-🚀✅Easy Solution||Beginner Friendly||C++ Solution|| using O(N^2)✅🚀
+// 🚀✅Easy Solution||Beginner Friendly||C++ Solution|| using O(N^2)✅🚀
 
-Approach
-stored the products in a unordered map, then calculated the number of permutations.
+// Approach
+// stored the products in a unordered map, then calculated the number of permutations.
 
-Complexity
-Time complexity:
-O(n^2)
+// Complexity
+// Time complexity:
+// O(n^2)

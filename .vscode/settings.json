@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "1800_maximumascendingsubarraysum": "cpp",
-        "1790_checkifonestringswapcanmakestringsequal": "cpp"
+        "1790_checkifonestringswapcanmakestringsequal": "cpp",
+        "1726_tuplewithsameproduct": "cpp"
     }
 }
