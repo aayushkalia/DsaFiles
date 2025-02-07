@@ -1,1 +1,29 @@
 3160. Find the Number of Distinct Colors Among the Balls
+
+class Solution {
+public:
+    vector<int> queryResults(int limit, vector<vector<int>>& nums) {
+        vector<int> nums1;
+        unordered_map<int, int> mpp1;
+        unordered_map<int, int> mpp2; 
+        int distinctColors = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            int ball = nums[i][0], color = nums[i][1];
+            if (mpp1.find(ball) != mpp1.end()) {
+                mpp2[mpp1[ball]]--;
+                if (mpp2[mpp1[ball]] == 0) {
+                    mpp2.erase(mpp1[ball]);
+                    distinctColors--;
+                }
+            }
+            mpp1[ball] = color;
+            if (mpp2[color] == 0) {
+                distinctColors++;
+            }
+            mpp2[color]++;
+            nums1.push_back(distinctColors);
+        }
+
+        return nums1;
+    }
+};
