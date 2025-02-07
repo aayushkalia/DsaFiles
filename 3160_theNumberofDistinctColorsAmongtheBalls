@@ -28,11 +28,11 @@ public:
     }
 };
 
-🚀🚀✅✅Finding distinct colors|| BEGINNER FRIENDLY || C++ approach || easy to understand
+// 🚀🚀✅✅Finding distinct colors|| BEGINNER FRIENDLY || C++ approach || easy to understand
 
-Approach
-two hashmaps used, one to track ball color, one to track distinct balls.
+// Approach
+// two hashmaps used, one to track ball color, one to track distinct balls.
 
-Complexity
-Time complexity:
-O(N)
+// Complexity
+// Time complexity:
+// O(N)
