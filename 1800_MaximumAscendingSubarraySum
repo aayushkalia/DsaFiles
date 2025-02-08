@@ -20,7 +20,7 @@
 //         return maximum;
 //     }
 // };
-
+//brute
 // o(n2)
 class Solution {
 public:
