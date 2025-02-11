@@ -1,0 +1,49 @@
+class Solution {
+public:
+    void merge(vector<int>&nums,int low,int part,int high,int &count){
+        vector<int>v1,v2;
+        for(int i = low;i<=part;i++) v1.push_back(nums[i]);
+        for(int i = part+1;i<=high;i++) v2.push_back(nums[i]);
+        int temp=0,temp2 =0;
+        while(temp < v1.size()){
+            while(temp2<v2.size() && (long long )v1[temp]>2LL*v2[temp2]){
+                temp2++;
+            }        
+            count+=temp2;
+            temp++;
+        }
+    
+        int idx=low;
+        temp = 0;temp2=0;
+        while(temp<v1.size()&&temp2<v2.size()){
+            if(v1[temp]>v2[temp2]){
+                nums[idx++]=v2[temp2++];
+            }
+            else nums[idx++]=v1[temp++];
+        }
+        while(temp<v1.size()){
+            nums[idx++]=v1[temp++];
+        }
+        while(temp2<v2.size()){
+            nums[idx++]=v2[temp2++];
+        }
+
+        
+    }
+    void ms(vector<int>&nums,int low,int high,int &count){
+        if(low<high){
+            int part1 = low+(high-low)/2;
+            ms(nums,low,part1,count);
+            ms(nums,part1+1,high,count);
+            merge(nums,low,part1,high,count);
+        }
+        return;
+    }
+    int reversePairs(vector<int>& nums) {
+        int count =0;
+        int low = 0,high = nums.size()-1;
+        ms(nums,low,high,count);
+        
+        return count;
+    }
+};
