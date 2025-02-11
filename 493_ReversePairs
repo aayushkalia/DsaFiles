@@ -49,3 +49,5 @@ public:
 };
 //solution
 Reverse Pairs||Beginner Friendly approach|| C++ solution||easy to understand🚀✅
+Approach
+used merge sort method, to prevent tle and overflow.
