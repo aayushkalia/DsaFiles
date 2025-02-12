@@ -27,8 +27,6 @@ public:
         while(temp2<v2.size()){
             nums[idx++]=v2[temp2++];
         }
-
-        
     }
     void ms(vector<int>&nums,int low,int high,int &count){
         if(low<high){
