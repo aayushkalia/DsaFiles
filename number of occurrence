@@ -18,7 +18,7 @@ class Solution {
 };
 
 
-
+ 
 
 int main() {
     int test_case;
