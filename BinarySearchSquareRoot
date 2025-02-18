@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    int floorSqrt(int n) {
+        int low = 1,mid=0,high=n,sqroot = -1;;
+        while(low<=high){
+            mid = low+(high-low)/2;
+            if(mid*mid<=n){
+                sqroot=max(mid,sqroot);
+                low=mid+1;
+            }
+            else{
+                high =mid-1;
+            }
+        }
+        return sqroot;
+    }
+};
