@@ -1,0 +1,36 @@
+class Solution {
+public:
+    int findmax(vector<int>nums){
+        int max = INT_MIN;
+        for(int i =0;i<nums.size();i++){
+            if(max<nums[i]){
+                max =nums[i];
+            }
+        }
+        return max;
+    }
+    int calcsum(vector<int>nums,int mid,int threshold){
+        double sum =0;
+        for(int i =0;i<nums.size();i++){
+            sum+= ceil((double)nums[i]/(double)mid );
+        }
+        if(sum<=threshold){
+            return 1;
+        }
+        return 0;
+    }
+    int smallestDivisor(vector<int>& nums, int threshold) {
+        int high = findmax(nums);
+        int low = 1,mid =0;
+        while(low<=high){
+            mid=low+(high-low)/2;
+            if(calcsum(nums,mid,threshold)==1){
+                high = mid-1;
+            }
+            else{
+                low=mid+1;
+            }
+        }
+        return low;
+    }
+};
