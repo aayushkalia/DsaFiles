@@ -1,0 +1,30 @@
+class Solution {
+public:
+    double calculateanswer(vector<int>piles,int mid){
+        double sum1 =0;
+        for(int i =0;i<piles.size();i++){
+            sum1 += ceil((double)(piles[i]) / (double)(mid));
+        }
+        return sum1;
+    }
+    int minEatingSpeed(vector<int>& piles, int h) {
+        int k =0;
+        int maxele =INT_MIN;
+        for(int i =0;i<piles.size();i++){
+            if(piles[i]>maxele){
+                maxele = piles[i];
+            }
+        }
+        int low = 1,mid = 0,high = maxele;
+        while(low<=high){
+            mid = low+(high-low)/2;
+            double sum =calculateanswer(piles,mid);
+            if(sum<=h){
+                k=mid;
+                high =mid-1;
+            }
+            else {low = mid+1;}
+        }
+        return k;
+    }
+};
