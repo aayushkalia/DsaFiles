@@ -1,0 +1,45 @@
+class Solution {
+public:
+    double findmax(vector<int>&nums){
+        double mini = INT_MIN;
+        for(int i =0;i<nums.size();i++){
+            if(mini<nums[i]) mini = nums[i];
+        }
+        return mini;
+    }
+    double sum11(vector<int>&nums,int low,int high){
+        double sum2=0;
+        for(int i =low;i<high;i++){
+            sum2+=nums[i];
+
+        }
+        return sum2;
+    }
+    int calculatesum(vector<int>&nums,int mid){
+        double sum1 = 0;int count=1;
+        for(int i=0;i<=nums.size()-1;i++){
+           
+            if(sum1+nums[i]<=mid) sum1+=nums[i];
+            else{
+                count++;
+                sum1=nums[i];
+            }
+        }
+        return count;
+    }
+    int splitArray(vector<int>& nums, int k) {
+        if (k>nums.size()) return  -1;
+        double high=sum11(nums,0,nums.size());int low=findmax(nums),mid=0;
+        while(low<=high){
+            mid = low+(high-low)/2;
+            if(calculatesum(nums,mid)<=k){
+                high=mid-1;
+            }
+            else {
+                low=mid+1;
+            }
+            
+        }
+        return low;
+    }
+};
