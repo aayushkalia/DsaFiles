@@ -1,0 +1,45 @@
+int findmax(vector<int>nums){
+    int maximum=-9999999;
+    for(int i =0;i<nums.size();i++){
+        if(nums[i]>maximum) maximum=nums[i];
+    }
+    return maximum;
+}
+double calculatesumarray(vector<int>nums){
+    double sum1 = 0;
+    for(int i = 0;i<nums.size();i++){
+        sum1+=nums[i];
+    }
+    return sum1;
+}
+double functionarray(vector<int>nums,int mid){
+    double sum =0, count=1;
+    for(int i =0;i<nums.size();i++){
+        if(sum+nums[i]<=mid){
+            sum+=nums[i];
+        }
+        else{
+            sum = nums[i];
+            count++;
+      
+        }
+    }
+    return count;
+}
+int findLargestMinDistance(vector<int> &boards, int k)
+{
+    int low = findmax(boards),mid = 0;
+    double high = calculatesumarray(boards);
+    while(low<=high){
+        mid = low + (high-low)/2;
+        if(functionarray(boards,mid)<=k){
+            high = mid-1;
+        }
+        else{
+            low =mid+1;
+        }
+    }
+    return low;
+
+
+}
